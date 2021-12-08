@@ -1,0 +1,59 @@
+{
+  "npmScope": "ng-grill",
+  "affected": {
+    "defaultBase": "master"
+  },
+  "implicitDependencies": {
+    "package.json": {
+      "dependencies": "*",
+      "devDependencies": "*"
+    },
+    ".eslintrc.json": "*"
+  },
+  "tasksRunnerOptions": {
+    "default": {
+      "runner": "@nrwl/workspace/tasks-runners/default",
+      "options": {
+        "cacheableOperations": ["build", "lint", "test", "e2e"]
+      }
+    }
+  },
+  "targetDependencies": {
+    "build": [
+      {
+        "target": "build",
+        "projects": "dependencies"
+      }
+    ]
+  },
+  "projects": {
+    "locations": {
+      "tags": []
+    },
+    "locations-e2e": {
+      "tags": [],
+      "implicitDependencies": ["locations"]
+    },
+    "menu": {
+      "tags": []
+    },
+    "menu-e2e": {
+      "tags": [],
+      "implicitDependencies": ["menu"]
+    },
+    "order": {
+      "tags": []
+    },
+    "order-e2e": {
+      "tags": [],
+      "implicitDependencies": ["order"]
+    },
+    "shell": {
+      "tags": []
+    },
+    "shell-e2e": {
+      "tags": [],
+      "implicitDependencies": ["shell"]
+    }
+  }
+}
